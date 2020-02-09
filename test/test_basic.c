@@ -7,7 +7,7 @@ TEST_TEAR_DOWN(Basic) {}
 
 TEST(Basic, True_is_True)
 {
-    TEST_ASSERT_TRUE(false);
+    TEST_ASSERT_TRUE(true);
 }
 
 TEST_GROUP_RUNNER(Basic) {
