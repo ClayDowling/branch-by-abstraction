@@ -1,10 +1,11 @@
 LIBRARY=libunity.a
 OBJS=$(patsubst %.c, %.o, $(wildcard *.c))
+LIBOBJS=unity.o unity_fixture.o unity_memory.o
 
 .PHONY: clean virgin
 
-$(LIBRARY): unity.c $(OBJS)
-	$(AR) -rs $@ $(OBJS)
+$(LIBRARY): unity.c $(LIBOBJS)
+	$(AR) -rs $@ $(LIBOBJS)
 
 unity.c:
 	./source-library.sh
